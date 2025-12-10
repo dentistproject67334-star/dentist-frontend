@@ -1,0 +1,41 @@
+<div class="container text-left" style="padding-top: 70px;">
+  <div style="flex:1;display:flex;justify-content:center;align-items:center;">
+    <div style="background:rgba(0,0,0,0.65);padding:30px;border-radius:15px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.5);color:#fff;width:100%;max-width:500px;">
+      <h2 style="text-align:center;margin-bottom:20px;font-weight:bold;color:#ffcc66;">Add Procedures</h2>
+      <form (ngSubmit)="submitdata()">
+        
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control"   required name="title" id="title" [(ngModel)]="blo.title" >
+        </div>
+        
+        <div class="d-grid">
+          <button type="submit" class="btn" style="background:#ff9933;color:white;font-weight:bold;">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<table class="table"style="margin-top:2%;">
+  <thead>
+    <tr>
+      <th scope="col">Procedure Id</th>
+       <th scope="col">Title</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of dtarr">
+      <td scope="col">{{r.pid}}</td>
+        <td scope="col">{{r.title}}</td>
+        
+<td>
+  <a class="btn btn-danger" (click)="deltreatment(r.pid)">Delete</a>
+  <a class="btn btn-primary" (click)="updateproce(r.pid)">Edit</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+

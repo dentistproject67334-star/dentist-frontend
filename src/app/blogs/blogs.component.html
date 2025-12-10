@@ -1,0 +1,30 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4" style="font-weight:700; color:#2c3e50;margin-top: 10%;margin-top: 80px;">
+    🦷 Our Latest Dental Blogs
+  </h2>
+  <p class="text-center text-muted mb-5" style="max-width:700px; margin:auto;">
+    Stay informed with expert tips, latest treatments, and dental care advice from our specialists.
+  </p>
+
+  <div class="row g-4 justify-content-evenly">
+    <div *ngFor="let b of barr; let i = index" class="col-12 col-sm-4 col-md-4" style="width: 18rem;">
+      <div class="card h-100">
+        <img [src]="b.photo" class="card-img-top" alt="Blog Image">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{b.title}}</h5>
+          <p class="card-text text-muted">{{b.description}}</p>
+          <a [routerLink]="
+                i === 0 ? '/blog1' :
+                i === 1 ? '/blog2' :
+                i === 2 ? '/blog3' :
+                i === 3 ? '/blog4' : 
+                 i === 4 ? '/blog5' : 
+                  i === 5 ? '/blog6' : ''
+              " class="btn btn-sm btn-outline-primary rounded-pill px-3">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- row -->
+</div> <!-- container -->
+
+

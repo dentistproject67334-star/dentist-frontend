@@ -1,0 +1,50 @@
+<div class="container" style="padding-top: 70px;">
+  <div class="d-flex justify-content-center">
+    <div class="p-4 rounded-3 shadow" style="background: rgba(0,0,0,0.65); color: #fff; width: 100%; max-width: 500px;">
+      <h2 class="text-center mb-3" style="font-weight:bold;color:#ffcc66;">Add Treatments</h2>
+      <form (ngSubmit)="submitdata()">
+        <div class="mb-3">
+          <label for="photo" class="form-label">Photo</label>
+          <input type="text" class="form-control" required name="photo" id="photo" [(ngModel)]="dt.tphoto">
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" required name="title" id="title" [(ngModel)]="dt.ttitle">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" required name="description" id="description" [(ngModel)]="dt.tdescription"></textarea>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-warning text-white fw-bold">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="table-responsive mt-4">
+  <table class="table table-hover table-bordered table-sm table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">TId</th>
+        <th scope="col">Title</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of dtarr">
+        <td>{{r.tid}}</td>
+        <td>{{r.ttitle}}</td>
+        <td>{{r.tphoto}}</td>
+        <td>{{r.tdescription}}</td>
+        <td>
+          <a class="btn btn-danger btn-sm mb-1" (click)="deltreatment(r.tid)">Delete</a>
+          <a class="btn btn-primary btn-sm mb-1" (click)="updatetr(r.tid)">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

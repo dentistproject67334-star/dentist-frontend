@@ -1,0 +1,162 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+ margin-top: 64px;
+  color: #fff;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* overlay */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero-text h1 span {
+  background: linear-gradient(to right, #c6ddf0, #73d0f2, #4eb1d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+.hero-btn {
+  background: linear-gradient(to right, #1e6f64, #0f4c75, #3282b8);
+  color: white;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* WhatsApp Floating */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 60px;
+  height: 60px;
+}
+
+#testimonials {
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  color: #0d3b66;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-left: 5px solid #0d3b66;
+  border-radius: 12px;
+  padding: 25px 20px;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #333;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h6 {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text; /* Chrome, Safari, Edge */
+  -webkit-text-fill-color: transparent;
+  background-clip: text;         /* Firefox */
+  color: transparent;            /* fallback */
+  display: inline-block;         /* ensures gradient is applied */
+}
+.hero-section {
+  background: url('/assets/b5.png') no-repeat center center/cover;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    background: url('/assets/background.png') no-repeat center center/cover !important;
+  }
+  .hero-text h1 span {
+  background: linear-gradient(to right, #e3e8ee, #c3cfd3, #ecf6f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+}

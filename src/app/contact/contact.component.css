@@ -1,0 +1,28 @@
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  background-color: #e6e1d5;
+  opacity: 0.7;
+  margin: 5px;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #1e3d59;
+  transform: scale(1.2);
+}
+
+.carousel-inner img {
+  transition: transform 0.8s ease-in-out;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.03);
+}
+
+.contact-page h2 {
+  font-size: 2rem;
+}
+
+
+

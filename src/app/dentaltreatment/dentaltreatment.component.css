@@ -1,0 +1,5 @@
+@media (max-width: 576px) {
+  h2 {
+    margin-top: 70px !important;
+  }
+}

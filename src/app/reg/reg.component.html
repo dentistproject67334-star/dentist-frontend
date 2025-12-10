@@ -1,0 +1,88 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100" style="background:linear-gradient(135deg,#e0f7f4,#fef9ef); margin-top: 65px;">
+  <div class="card shadow-lg border-0" style="max-width:500px; width:100%; border-radius:20px; margin-top: 20px;">
+    <div class="card-body p-4">
+      <h2 class="text-center mb-4" style="color:#1c6158; font-weight:700;">Register</h2>
+
+      <form #rForm="ngForm" (ngSubmit)="submitdata()">
+        <div class="mb-3">
+          <label for="nm" class="form-label fw-semibold">Full Name</label>
+          <input type="text" name="nm" #nm="ngModel" pattern="^[a-zA-Z]+$" class="form-control" placeholder="Enter your name" required id="nm" [(ngModel)]="r.name">
+          <div *ngIf="!nm.valid" class="text-danger small" > 
+            <div *ngIf="nm.errors?.['required']">Name cannot be blank</div>
+            <div *ngIf="nm.errors?.['pattern']">Name can contain only Alphabets</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address" class="form-label fw-semibold">Address</label>
+          <input type="text" name="ad" #ad="ngModel" class="form-control" placeholder="Enter your address" required id="add" [(ngModel)]="r.address">
+          <div *ngIf="!ad.valid" class="text-danger small"> 
+            <div *ngIf="ad.errors?.['required']">Address cannot be blank</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold" for="mn">Mobile Number</label>
+          <input type="tel" class="form-control" placeholder="Enter mobile number" required id="mn" name="mn" #mn="ngModel" pattern="^[0-9]{10}$" [(ngModel)]="r.mobile">
+          <div *ngIf="!mn.valid" class="text-danger small"> 
+            <div *ngIf="mn.errors?.['required']">Mobile No cannot be blank</div>
+            <div *ngIf="mn.errors?.['pattern']">Mobile must be valid</div>
+          </div>
+        </div>
+
+        
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Gender</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" #gender="ngModel" [(ngModel)]="r.gender" value="Male" required>
+            <label class="form-check-label">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" [(ngModel)]="r.gender" value="Female" required>
+            <label class="form-check-label">Female</label>
+          </div>
+          <div *ngIf="gender.errors?.['required']" class="text-danger small">
+            Gender cannot be blank
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold" for="city">City</label>
+          <input type="text" name="city" #city="ngModel" class="form-control" placeholder="Enter city" required id="city" [(ngModel)]="r.city">
+          <div *ngIf="!city.valid" class="text-danger small"> 
+            <div *ngIf="city.errors?.['required']">City cannot be blank</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold" for="el">Email</label>
+          <input type="email" class="form-control" placeholder="Enter email" required id="el" name="em" #em="ngModel" [(ngModel)]="r.emailid">
+          <div *ngIf="!em.valid" class="text-danger small"> 
+            <div *ngIf="em.errors?.['required']">Email cannot be blank</div>
+            <div *ngIf="em.errors?.['email']">Email must be valid</div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-semibold" for="pw">Password</label>
+          <input type="password" class="form-control" placeholder="Enter password" required id="pw" name="ps" #ps="ngModel" pattern="^[a-zA-Z0-9!@#$%]{8,15}$" [(ngModel)]="r.password">
+          <div *ngIf="!ps.valid" class="text-danger small"> 
+            <div *ngIf="ps.errors?.['required']">Password cannot be blank</div>
+            <div *ngIf="ps.errors?.['pattern']">Password is weak</div>
+          </div>
+        </div>
+
+        <div class="d-grid mb-3">
+          <button type="submit" [disabled]="!rForm.valid" class="btn text-white fw-bold" style="background:#1c6158;">
+            Register
+          </button>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="text-muted">Already have an account?</span>
+          <a routerLink="/login" class="fw-semibold" style="color:#1c6158; text-decoration:none;">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

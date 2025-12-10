@@ -1,0 +1,136 @@
+.hero-section {
+  height: 519px;
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  background: linear-gradient(to right, #350d31, #b56096, #d398c7);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero-title {
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 20px;
+  font-size: 2.7rem;
+}
+
+.hero-subtitle {
+  margin-bottom: 30px;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.hero-btn {
+  background: linear-gradient(to right, #a8b4b3, #d799e3, #7c7e7f);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.hero-img {
+  margin-top: 40px;
+  max-height: 480px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Feature List */
+.hero-features .feature-item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.hero-features .feature-item i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.before-after-section {
+  background: #fff;
+}
+
+.before-after-wrapper {
+  position: relative;
+  max-width: 800px;
+  
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: ew-resize;
+  max-height: 400px;
+}
+
+.before-after-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  
+}
+
+.after-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+.before-after-wrapper:hover .after-img {
+  width: 100%;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 2px solid #9a4dff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.slider-handle:hover {
+  transform: translate(-50%, 0) scale(1.2);
+}
+.accordion-button {
+  background: #fff;
+  color: #2a0b4a;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #9a4dff;
+  color: #fff;
+}
+
+.accordion-body {
+  background: #f5f0ff;
+  border-radius: 0 0 10px 10px;
+  padding: 15px 20px;
+  color: #4a2a7c;
+}

@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 60px; /* height of navbar */
+}
+
+.social-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #555;
+  transition: transform 0.3s, background 0.3s;
+  position: relative;
+}
+
+.social-circle::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+}
+
+.social-circle.facebook::after {
+  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg');
+}
+
+.social-circle.instagram::after {
+  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg');
+}
+
+.social-circle.twitter::after {
+  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg');
+}
+
+.social-circle.whatsapp::after {
+  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg');
+}
+
+.social-circle.youtube::after {
+  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg');
+}
+
+.social-circle:hover {
+  transform: scale(1.2);
+  background: #9a4dff;
+}
+
+
+@media (max-width: 768px) {
+  .home-container{
+    
+ background-image: url('/assets/background.png') !important;
+
+  }
+}

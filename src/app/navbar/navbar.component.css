@@ -1,0 +1,76 @@
+/* Navbar Brand */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  color: #1c6158;  
+  margin-right: 3px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #4a6f6a !important;  /* light professional shade */
+  margin-right: 8px;           
+  transition: all 0.3s ease;
+}
+
+/* Navbar Link Hover */
+.navbar-nav .nav-link:hover {
+  color: #2a4d48 !important;  /* slightly darker accent */
+  text-decoration: underline; /* subtle hover effect */
+}
+
+/* Dropdown Menu */
+.navbar-nav .dropdown-menu {
+  background-color: #f4f9f9;  /* light background */
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.navbar-nav .dropdown-item {
+  color: #4a6f6a;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #d9f0f0;
+  color: #1c6158;
+}
+
+/* Book Appointment Button */
+.btn-book {
+  display: inline-block;
+  background: linear-gradient(to right, #c6ddf0, #d6eef8, #bdddf1); /* lighter shades */
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.btn-book:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  opacity: 0.95;
+}
+@media (max-width: 768px) {
+  .btn-book {
+   all: unset;      /* center horizontally */
+    color: inherit; /* inherit nav text color */
+    cursor: pointer; /* show pointer */
+    display: inline; /* inline text like nav */
+    text-decoration: none;
+    font-weight: normal;
+     transition: transform 0.15s ease, opacity 0.15s ease; /* keep click animation */
+  }
+ .btn-book:active {
+    transform: scale(0.95); /* slightly shrink */
+    opacity: 0.5;
+  }
+  }

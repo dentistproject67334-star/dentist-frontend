@@ -1,0 +1,27 @@
+<h1 align="center" style="font-family: sans-serif;margin-top: 90px;font-size: 30px; color: rgb(61, 169, 169);">Registrations</h1>
+<div class="table-responsive mt-3">
+  <table class="table table-hover table-bordered table-striped align-middle" >
+  <thead>
+    <tr>
+      <th scope="col">Rid</th>
+      <th scope="col">Name</th>
+     <th scope="col">Gender</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Email id</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let r of rarr">
+<td scope="col">{{r.regid}}</td>
+      <td scope="col">{{r.name}}</td>
+      <td scope="col">{{r.gender}}</td>
+     <td scope="col">{{r.address}}</td>
+     <td scope="col">{{r.city}}</td>
+     <td scope="col">{{r.mobile}}</td>
+      <td scope="col">{{r.emailid}}</td>
+   </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,38 @@
+h1, h5 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  color: #a9a2a2;
+  line-height: 1.8;
+}
+
+.blockquote {
+  border-left: 4px solid #1c6158;
+  padding-left: 16px;
+  font-style: italic;
+}
+
+.btn-outline-success {
+  border-color: #1c6158;
+  color: #1c6158;
+}
+
+.btn-outline-success:hover {
+  background-color: #1c6158;
+  color: #fff;
+}
+
+.card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+footer {
+  background-color: #f9f9f9;
+}
